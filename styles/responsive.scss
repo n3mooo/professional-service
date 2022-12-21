@@ -1,0 +1,41 @@
+@media screen and (min-width: 640px) {
+  // responsive slider
+  .swiper-button-prev {
+    left: 1.5rem;
+  }
+
+  .swiper-button-next {
+    right: 1.5rem;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .swiper-pagination {
+    bottom: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // responsive slider
+  .swiper-button-prev {
+    left: 2rem;
+  }
+
+  .swiper-button-next {
+    right: 2rem;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .swiper-pagination {
+    bottom: 2rem !important;
+  }
+}

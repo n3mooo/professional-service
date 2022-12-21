@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* Global style */
+@import './globals.scss';
+@import './fonts.scss';
+@import './responsive.scss';
+
+/* Wrapper */
+
+/* Components */

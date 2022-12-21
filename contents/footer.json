@@ -1,0 +1,16 @@
+{
+  "image": "/dision_logo_black.svg",
+  "description": "Professionelle IT- und Cyber-Security Lösungen, Consulting Services, Software-Entwicklung und Modernste IT-Security Produkte",
+  "license": "Copyright ©2022 dynexo GmbH. All Rights Reserved.",
+  "contents": [
+    {
+      "title": "Menü",
+      "linkList": [
+        { "link": "Was ist SOAR?", "url": "#information", "icon": "" },
+        { "link": "Aufgaben", "url": "#task", "icon": "" },
+        { "link": "Über Uns", "url": "#about", "icon": "" },
+        { "link": "Preise", "url": "#pricing", "icon": "" }
+      ]
+    }
+  ]
+}
