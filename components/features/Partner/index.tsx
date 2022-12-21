@@ -19,22 +19,26 @@ export function Partner({ content }: PartnerProps) {
   };
 
   return (
-    <div>
-      <Wrapper>
-        <Slider {...settings}>
-          {content.map((item, index) => (
-            <div key={index} className="relative">
-              <Image
-                src={item.image}
-                alt=""
-                width={0}
-                height={0}
-                className="object-cover h-20 w-1/2 mx-auto"
-              ></Image>
-            </div>
-          ))}
-        </Slider>
-      </Wrapper>
+    <div className="container mb-24">
+      <div className="title-small text-center mb-8">
+        <h4 className="font-bold tracking-[0.2rem] text-xs leading-6 text-[#666] uppercase">
+          Unsere Partner und Lieferanten
+        </h4>
+      </div>
+
+      <Slider {...settings}>
+        {content.map((item, index) => (
+          <div key={index} className="relative">
+            <Image
+              src={item.image}
+              alt=""
+              width={0}
+              height={0}
+              className="object-cover h-20 w-1/2 mx-auto"
+            />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }

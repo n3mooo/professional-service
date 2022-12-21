@@ -36,7 +36,7 @@ export function Hero(props: HeroProps) {
                 Leistungen
               </h1>
             </div>
-            <p className="mb-12 text-2xl text-[#00172e] max-w-3xl mx-auto text-center">
+            <p className="mb-12 text-xl text-[#00172e] max-w-3xl mx-auto text-center">
               Mit über xy Jahren Erfahrung bieten wir Ihnen unsere Lösung zu jeglichen Problemen
               rund um Ihre IT an.
             </p>
