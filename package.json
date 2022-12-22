@@ -12,6 +12,8 @@
     "@headlessui/react": "^1.7.5",
     "@heroicons/react": "^2.0.13",
     "@next/font": "^13.0.6",
+    "@splidejs/react-splide": "splidejs/react-splide",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/node": "18.11.11",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",

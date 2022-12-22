@@ -1,44 +1,57 @@
-import { Wrapper } from '@/components/common';
+import { Title } from '@/components/common';
+import { PartnerProps } from '@/models';
+import { Splide, SplideProps, SplideSlide } from '@splidejs/react-splide';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import Image from 'next/image';
-import Slider, { Settings } from 'react-slick';
-export interface PartnerProps {
-  content: {
-    image: string;
-  }[];
-}
 
-export function Partner({ content }: PartnerProps) {
-  const settings: Settings = {
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    cssEase: 'linear',
+export function Partner({ subtitle, content }: PartnerProps) {
+  const optionSplide: SplideProps = {
+    options: {
+      type: 'loop',
+      drag: 'free',
+      arrows: false,
+      pagination: false,
+      perPage: 4,
+      autoScroll: {
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        rewind: false,
+        speed: 1,
+      },
+      lazyLoad: true,
+      reducedMotion: {
+        speed: 0,
+        rewindSpeed: 0,
+        autoplay: 'pause',
+      },
+      breakpoints: {
+        768: {
+          perPage: 3,
+        },
+        425: {
+          perPage: 2,
+        },
+      },
+    },
+    extensions: { AutoScroll },
   };
 
   return (
-    <div className="container mb-24">
-      <div className="title-small text-center mb-8">
-        <h4 className="font-bold tracking-[0.2rem] text-xs leading-6 text-[#666] uppercase">
-          Unsere Partner und Lieferanten
-        </h4>
-      </div>
-
-      <Slider {...settings}>
+    <div className="container mb-12 md:mb-24">
+      <Title subtitle={subtitle} />
+      <Splide aria-label="Logo banner" {...optionSplide}>
         {content.map((item, index) => (
-          <div key={index} className="relative">
+          <SplideSlide key={index} className="relative">
             <Image
               src={item.image}
               alt=""
               width={0}
               height={0}
-              className="object-cover h-20 w-1/2 mx-auto"
+              className="object-cover h-30 sm:h-20 w-1/2 mx-auto"
             />
-          </div>
+          </SplideSlide>
         ))}
-      </Slider>
+      </Splide>
     </div>
   );
 }

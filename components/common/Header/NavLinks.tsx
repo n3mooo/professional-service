@@ -1,19 +1,10 @@
+import { HeaderProps } from '@/models';
 import Link from 'next/link';
 
-interface Props {
-  header: {
-    menu: {
-      name: string;
-      url: string;
-    }[];
-    url: string;
-  };
-}
-
-export default function NavLinks({ header }: Props) {
+export default function NavLinks({ menu }: HeaderProps) {
   return (
     <>
-      {header.menu.map((menu, index) => {
+      {menu?.map((menu, index) => {
         return (
           <li key={index}>
             <Link

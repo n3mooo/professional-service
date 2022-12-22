@@ -5,62 +5,60 @@ import serviceImg from '@/public/images/bg-services.png';
 import { Wrapper } from '@/components/common';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HeroProps } from '@/models';
 
-export interface HeroProps {
-  title: string;
-  title2: string;
-  content: string;
-  content2: string;
-  buttonContent: string;
-  image: string;
-  href: string;
-}
-
-export function Hero(props: HeroProps) {
+export function Hero({
+  title,
+  title2,
+  content,
+  buttonContent,
+  buttonContent2,
+  image,
+  href,
+  href2,
+}: HeroProps) {
   return (
     <div>
       <div className={clsx('', styles.heroSection)}>
-        <Wrapper className="absolute z-10 mt-16">
+        <Wrapper className="absolute z-10 md:mt-16">
           <div className={clsx('mb-12', styles.heroContent)}>
-            {/* <span className="h-4 w-4 bg-[#00172e]/90 rounded-full absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2"></span> */}
-            <div className="title text-center mb-4 flex items-center justify-center gap-6">
+            <div className="title text-center mb-4 flex flex-col xl:flex-row items-center justify-center gap-2 xs:gap-3 xl:gap-6">
               <h1
                 className={clsx(
-                  `inline-block text-[6rem] leading-tight font-bold text-[#0d95d2]`,
+                  `inline-block text-4xl xs:text-5xl md:text-7xl xl:text-[5.2rem] leading-tight font-bold text-[#0d95d2]`,
                   styles.textGradient
                 )}
               >
-                Professionelle
+                {title}
               </h1>
-              <h1 className="inline-block text-[6rem] leading-tight font-bold text-[#00172e]">
-                Leistungen
+              <h1 className="inline-block text-4xl xs:text-5xl md:text-7xl xl:text-[5.2rem] leading-tight font-bold text-[#00172e]">
+                {title2}
               </h1>
             </div>
-            <p className="mb-12 text-xl text-[#00172e] max-w-3xl mx-auto text-center">
-              Mit über xy Jahren Erfahrung bieten wir Ihnen unsere Lösung zu jeglichen Problemen
-              rund um Ihre IT an.
+            <p className="mb-12 text-base md:text-lg xl:text-xl text-[#00172e] max-w-3xl mx-auto text-center">
+              {content}
             </p>
-            <div className="mb-24 heroButton max-w-md mx-auto flex items-center justify-center gap-6">
-              <Link href={'#contact'} className="basis-1/2 btn btn-dark-outline">
-                Erfahren Sie mehr…
+            <div className="mb-12 md:mb-24 heroButton w-full sm:max-w-md mx-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-6">
+              <Link href={href} className="basis-full sm:basis-1/2 btn btn-dark-outline">
+                {buttonContent}
               </Link>
-              <div className="relative basis-1/2 btn-gradient">
+              <div className="relative basis-full sm:basis-1/2 btn-gradient">
                 <span className="layer-gradient"></span>
-                <Link href={'#contact'} className="btn">
-                  Explore more
+                <Link href={href2} className="btn">
+                  {buttonContent2}
                 </Link>
               </div>
             </div>
           </div>
           <div className="relative">
             <Image
-              src={serviceImg}
+              src={image}
               alt=""
               height={0}
               width={0}
               priority
-              className="object-cover h-[30rem] rounded"
-            ></Image>
+              className="object-cover h-full md:h-[20rem] lg:h-[30rem] rounded"
+            />
           </div>
         </Wrapper>
       </div>

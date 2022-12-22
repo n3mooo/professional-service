@@ -1,0 +1,30 @@
+{
+  "heading": {
+    "subtitle": "Service",
+    "title": "Unsere Leistungen",
+    "content": "Wir bieten alle Arten von IT-Lösungen, die Ihren Erfolg garantieren, die Ihren Erfolg garantieren"
+  },
+  "contents": [
+    {
+      "name": "Cyber-Sicherheit Netzwerk",
+      "description": "Anspruchsvolle und zielgerichtete Sicherheit für IT-Systeme, Netzwerke, Firewalls und VPNs.",
+      "image": "/icons/003-firewall.svg",
+      "buttonContent": "Erfahren Sie mehr…",
+      "url": "https://www.dynexo.de/services/"
+    },
+    {
+      "name": "IT-Systeme, Applikationen",
+      "description": "Dienste, Systeme, Netzwerke und Anwendungen, egal ob Windows, Linux oder Apple",
+      "image": "/icons/003-firewall.svg",
+      "buttonContent": "Erfahren Sie mehr…",
+      "url": "https://www.dynexo.de/services/"
+    },
+    {
+      "name": "Operational Services",
+      "description": "Betrieb von IT-, Netzwerk und Cyber-Sicherheitssystemen",
+      "image": "/icons/003-firewall.svg",
+      "buttonContent": "Erfahren Sie mehr…",
+      "url": "https://www.dynexo.de/services/"
+    }
+  ]
+}

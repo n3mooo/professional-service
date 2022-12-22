@@ -6,6 +6,7 @@ import Brand from './Brand';
 import Button from './Button';
 import styles from './Header.module.scss';
 import NavLinks from './NavLinks';
+import { HeaderProps } from '@/models';
 
 export function Header() {
   const [classSticky, setClassSticky] = useState('');
@@ -37,7 +38,7 @@ export function Header() {
     >
       <div className="container flex items-center font-medium justify-between">
         <div className="z-40 py-4 md:w-auto w-full flex justify-between">
-          <Brand header={header} />
+          <Brand logo={header.logo} />
           <div className="md:hidden my-auto" onClick={() => setOpen(!open)}>
             {open ? (
               <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -47,10 +48,10 @@ export function Header() {
           </div>
         </div>
         <ul className="md:flex hidden items-center gap-4">
-          <NavLinks header={header} />
+          <NavLinks menu={header.menu} />
         </ul>
         <div className="md:block hidden">
-          <Button header={header} />
+          <Button url={header.url} btnContent={header.btnContent} />
         </div>
         {/* Mobile nav */}
         <div
@@ -60,9 +61,9 @@ export function Header() {
           )}
         >
           <ul className={clsx(`container bg-white min-h-screen`)}>
-            <NavLinks header={header} />
+            <NavLinks menu={header.menu} />
             <div className="py-5">
-              <Button header={header} />
+              <Button url={header.url} btnContent={header.btnContent} />
             </div>
           </ul>
         </div>

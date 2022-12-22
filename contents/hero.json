@@ -1,9 +1,11 @@
 {
-  "title": "Professionelle Leistungen",
-  "title2": "rund um Ihre IT",
+  "title": "Professionelle",
+  "title2": "Leistungen",
   "content": "Mit über xy Jahren Erfahrung bieten wir Ihnen unsere Lösung zu jeglichen Problemen rund um Ihre IT an.",
   "content2": "",
-  "buttonContent": "",
+  "buttonContent": "Erfahren Sie mehr…",
+  "buttonContent2": "Explore more",
   "image": "/images/bg-services.png",
-  "href": "#information"
+  "href": "#contact",
+  "href2": "#partner"
 }
