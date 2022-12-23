@@ -1,5 +1,5 @@
 import { Header } from '@/components/common';
-import { Hero, Partner, Service } from '@/components/features';
+import { About, Hero, Partner, Refer, Service, Stats } from '@/components/features';
 import { getSettings } from '@/utils';
 import Head from 'next/head';
 
@@ -7,9 +7,11 @@ interface HomeProps {
   hero: any;
   partner: any;
   service: any;
+  about: any;
+  stats: any;
 }
 
-const Home = ({ hero, partner, service }: HomeProps) => {
+const Home = ({ hero, partner, service, about, stats }: HomeProps) => {
   return (
     <>
       <Head>
@@ -22,6 +24,9 @@ const Home = ({ hero, partner, service }: HomeProps) => {
       <Partner {...partner} />
       <hr />
       <Service {...service} />
+      <About {...about} />
+      <Stats {...stats} />
+      <Refer />
       {/* <Footer /> */}
     </>
   );
@@ -30,10 +35,10 @@ const Home = ({ hero, partner, service }: HomeProps) => {
 export default Home;
 
 export async function getStaticProps() {
-  const { hero, partner, service } = getSettings();
+  const { hero, partner, service, about, stats } = getSettings();
 
   return {
-    props: { hero, partner, service },
+    props: { hero, partner, service, about, stats },
     revalidate: 60,
   };
 }

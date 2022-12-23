@@ -1,22 +1,11 @@
-import clsx from 'clsx';
-import React from 'react';
-import styles from './Hero.module.scss';
-import serviceImg from '@/public/images/bg-services.png';
 import { Wrapper } from '@/components/common';
+import { HeroProps } from '@/models';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HeroProps } from '@/models';
+import styles from './Hero.module.scss';
 
-export function Hero({
-  title,
-  title2,
-  content,
-  buttonContent,
-  buttonContent2,
-  image,
-  href,
-  href2,
-}: HeroProps) {
+export function Hero({ title, title2, content, btnText, btnText2, image, href, href2 }: HeroProps) {
   return (
     <div>
       <div className={clsx('', styles.heroSection)}>
@@ -35,17 +24,17 @@ export function Hero({
                 {title2}
               </h1>
             </div>
-            <p className="mb-12 text-base md:text-lg xl:text-xl text-[#00172e] max-w-3xl mx-auto text-center">
+            <p className="mb-12 text-base md:text-lg lg:text-xl xl:text-2xl text-[#00172e] max-w-3xl mx-auto text-center">
               {content}
             </p>
             <div className="mb-12 md:mb-24 heroButton w-full sm:max-w-md mx-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-6">
               <Link href={href} className="basis-full sm:basis-1/2 btn btn-dark-outline">
-                {buttonContent}
+                {btnText}
               </Link>
               <div className="relative basis-full sm:basis-1/2 btn-gradient">
                 <span className="layer-gradient"></span>
                 <Link href={href2} className="btn">
-                  {buttonContent2}
+                  {btnText2}
                 </Link>
               </div>
             </div>

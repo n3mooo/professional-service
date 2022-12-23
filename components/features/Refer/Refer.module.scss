@@ -1,0 +1,63 @@
+.referSection {
+  --flex: initial;
+  --direction: row-reverse;
+  --sm-direction: column;
+  --md-direction: column;
+  --lg-direction: row-reverse;
+  --align: center;
+  --justify: space-between;
+  --gap: 32px;
+
+  display: flex;
+  flex-direction: var(--direction, column);
+  align-items: var(--align, stretch);
+  justify-content: var(--justify, flex-start);
+  flex: var(--flex, initial);
+  grid-gap: var(--gap, 0);
+  gap: var(--gap, 0);
+
+  .referCard {
+    --flex: initial;
+    --direction: row;
+    --align: stretch;
+    --justify: flex-start;
+    --gap: 12px;
+
+    display: flex;
+    flex-direction: var(--direction, column);
+    align-items: var(--align, stretch);
+    justify-content: var(--justify, flex-start);
+    flex: var(--flex, initial);
+    grid-gap: var(--gap, 0);
+    gap: var(--gap, 0);
+
+    .referCardIcon {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eaeaea;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  .referSection {
+    --direction: var(--md-direction);
+    --align: var(--md-align);
+    --justify: var(--md-justify);
+    --gap: var(--md-gap);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .referSection {
+    --direction: var(--sm-direction);
+    --align: var(--sm-align);
+    --justify: var(--sm-justify);
+    --gap: var(--sm-gap);
+  }
+}

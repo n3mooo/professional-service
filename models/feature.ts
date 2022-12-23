@@ -3,8 +3,8 @@ export interface HeroProps {
   title2: string;
   content: string;
   content2: string;
-  buttonContent: string;
-  buttonContent2: string;
+  btnText: string;
+  btnText2: string;
   image: string;
   href: string;
   href2: string;
@@ -26,9 +26,24 @@ export interface ServiceProps {
   };
   contents: {
     name: string;
-    description: string;
+    desc: string;
     image: string;
-    buttonContent?: string;
-    url: string;
+    btnText?: string;
+    href: string;
+  }[];
+}
+
+export interface AboutProps {
+  title: string;
+  image: string;
+  contents: [];
+  href: string;
+  btnText: string;
+}
+
+export interface StatsProps {
+  contents: {
+    num: string;
+    text: string;
   }[];
 }

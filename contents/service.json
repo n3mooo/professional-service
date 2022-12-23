@@ -7,24 +7,24 @@
   "contents": [
     {
       "name": "Cyber-Sicherheit Netzwerk",
-      "description": "Anspruchsvolle und zielgerichtete Sicherheit für IT-Systeme, Netzwerke, Firewalls und VPNs.",
+      "desc": "Anspruchsvolle und zielgerichtete Sicherheit für IT-Systeme, Netzwerke, Firewalls und VPNs.",
       "image": "/icons/003-firewall.svg",
-      "buttonContent": "Erfahren Sie mehr…",
-      "url": "https://www.dynexo.de/services/"
+      "btnText": "Erfahren Sie mehr…",
+      "href": "https://www.dynexo.de/services/"
     },
     {
       "name": "IT-Systeme, Applikationen",
-      "description": "Dienste, Systeme, Netzwerke und Anwendungen, egal ob Windows, Linux oder Apple",
+      "desc": "Dienste, Systeme, Netzwerke und Anwendungen, egal ob Windows, Linux oder Apple",
       "image": "/icons/003-firewall.svg",
-      "buttonContent": "Erfahren Sie mehr…",
-      "url": "https://www.dynexo.de/services/"
+      "btnText": "Erfahren Sie mehr…",
+      "href": "https://www.dynexo.de/services/"
     },
     {
       "name": "Operational Services",
-      "description": "Betrieb von IT-, Netzwerk und Cyber-Sicherheitssystemen",
+      "desc": "Betrieb von IT-, Netzwerk und Cyber-Sicherheitssystemen",
       "image": "/icons/003-firewall.svg",
-      "buttonContent": "Erfahren Sie mehr…",
-      "url": "https://www.dynexo.de/services/"
+      "btnText": "Erfahren Sie mehr…",
+      "href": "https://www.dynexo.de/services/"
     }
   ]
 }

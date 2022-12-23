@@ -8,7 +8,7 @@ export default function NavLinks({ menu }: HeaderProps) {
         return (
           <li key={index}>
             <Link
-              href={menu.url}
+              href={menu.href}
               className="pt-8 pb-4 md:py-4 md:px-4 inline-block text-[#00172e] hover:text-[#27a9e1]"
             >
               {menu.name}

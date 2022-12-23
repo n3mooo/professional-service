@@ -51,7 +51,7 @@ export function Header() {
           <NavLinks menu={header.menu} />
         </ul>
         <div className="md:block hidden">
-          <Button url={header.url} btnContent={header.btnContent} />
+          <Button href={header.href} btnText={header.btnText} />
         </div>
         {/* Mobile nav */}
         <div
@@ -63,7 +63,7 @@ export function Header() {
           <ul className={clsx(`container bg-white min-h-screen`)}>
             <NavLinks menu={header.menu} />
             <div className="py-5">
-              <Button url={header.url} btnContent={header.btnContent} />
+              <Button href={header.href} btnText={header.btnText} />
             </div>
           </ul>
         </div>

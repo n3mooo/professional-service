@@ -30,7 +30,7 @@ export function Footer() {
                   <li key={index}>
                     <Link
                       className="text-base font-normal text-[#00172e] hover:text-[#27a9e1] "
-                      href={item.url}
+                      href={item.href}
                     >
                       {item.link}
                     </Link>

@@ -1,0 +1,10 @@
+{
+  "title": "Über Uns",
+  "image": "/images/team.jpg",
+  "contents": [
+    "Die dynexo GmbH ist spezialisiert auf moderne, IT-bezogene Dienstleistungen im Bereich Cybersicherheit, IT-Systeme, Automatisierung, Netzwerkinfrastruktur, Cloud Services und Softwareentwicklung",
+    "Wir konzentrieren uns stark auf die Bedürfnisse Ihres Unternehmens, um Lösungen zu finden, die Ihren Anforderungen am besten entsprechen."
+  ],
+  "href": "#contact",
+  "btnText": "Read more"
+}

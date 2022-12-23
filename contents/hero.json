@@ -3,8 +3,8 @@
   "title2": "Leistungen",
   "content": "Mit über xy Jahren Erfahrung bieten wir Ihnen unsere Lösung zu jeglichen Problemen rund um Ihre IT an.",
   "content2": "",
-  "buttonContent": "Erfahren Sie mehr…",
-  "buttonContent2": "Explore more",
+  "btnText": "Erfahren Sie mehr…",
+  "btnText2": "Explore more",
   "image": "/images/bg-services.png",
   "href": "#contact",
   "href2": "#partner"

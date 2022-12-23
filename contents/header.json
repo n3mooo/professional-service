@@ -2,18 +2,18 @@
   "menu": [
     {
       "name": "Service",
-      "url": "#service"
+      "href": "#service"
     },
     {
       "name": "Partner",
-      "url": "#partner"
+      "href": "#partner"
     },
     {
       "name": "About Us",
-      "url": "#about"
+      "href": "#about"
     }
   ],
   "logo": "../dynexo_logo_white.svg",
-  "btnContent": "Contact",
-  "url": "#contact"
+  "btnText": "Contact",
+  "href": "#contact"
 }

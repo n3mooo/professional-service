@@ -6,10 +6,10 @@
     {
       "title": "Menü",
       "linkList": [
-        { "link": "Was ist SOAR?", "url": "#information", "icon": "" },
-        { "link": "Aufgaben", "url": "#task", "icon": "" },
-        { "link": "Über Uns", "url": "#about", "icon": "" },
-        { "link": "Preise", "url": "#pricing", "icon": "" }
+        { "link": "Was ist SOAR?", "href": "#information", "icon": "" },
+        { "link": "Aufgaben", "href": "#task", "icon": "" },
+        { "link": "Über Uns", "href": "#about", "icon": "" },
+        { "link": "Preise", "href": "#pricing", "icon": "" }
       ]
     }
   ]
