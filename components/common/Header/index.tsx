@@ -1,4 +1,4 @@
-import header from '@/contents/header.json';
+import { HeaderProps } from '@/models';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
@@ -6,9 +6,8 @@ import Brand from './Brand';
 import Button from './Button';
 import styles from './Header.module.scss';
 import NavLinks from './NavLinks';
-import { HeaderProps } from '@/models';
 
-export function Header() {
+export function Header({ logo, menu, href, btnText }: HeaderProps) {
   const [classSticky, setClassSticky] = useState('');
   const [open, setOpen] = useState(false);
 
@@ -38,7 +37,7 @@ export function Header() {
     >
       <div className="container flex items-center font-medium justify-between">
         <div className="z-40 py-4 md:w-auto w-full flex justify-between">
-          <Brand logo={header.logo} />
+          <Brand logo={logo} />
           <div className="md:hidden my-auto" onClick={() => setOpen(!open)}>
             {open ? (
               <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -48,10 +47,10 @@ export function Header() {
           </div>
         </div>
         <ul className="md:flex hidden items-center gap-4">
-          <NavLinks menu={header.menu} />
+          <NavLinks menu={menu} />
         </ul>
         <div className="md:block hidden">
-          <Button href={header.href} btnText={header.btnText} />
+          <Button href={href} btnText={btnText} />
         </div>
         {/* Mobile nav */}
         <div
@@ -61,9 +60,9 @@ export function Header() {
           )}
         >
           <ul className={clsx(`container bg-white min-h-screen`)}>
-            <NavLinks menu={header.menu} />
+            <NavLinks menu={menu} />
             <div className="py-5">
-              <Button href={header.href} btnText={header.btnText} />
+              <Button href={href} btnText={btnText} />
             </div>
           </ul>
         </div>

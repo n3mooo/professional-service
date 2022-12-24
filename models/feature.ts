@@ -47,3 +47,12 @@ export interface StatsProps {
     text: string;
   }[];
 }
+
+export interface ReferProps {
+  image: string;
+  contents: {
+    name: string;
+    desc: string;
+    image: string;
+  }[];
+}

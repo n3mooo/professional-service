@@ -1,15 +1,37 @@
 {
-  "image": "/dision_logo_black.svg",
+  "contact": {
+    "title": "Wir freuen uns auf Ihre Nachricht",
+    "contents": "Egal ob zu unseren Lösungen, Produkten Leitungen oder Stellenabgeboten: Wir stehen lhnen für alle Themen sehr gern zur Verfügung.",
+    "href": "#contact",
+    "btnText": "Anfrage senden..."
+  },
+  "image": "/dynexo_logo_white.svg",
   "description": "Professionelle IT- und Cyber-Security Lösungen, Consulting Services, Software-Entwicklung und Modernste IT-Security Produkte",
   "license": "Copyright ©2022 dynexo GmbH. All Rights Reserved.",
   "contents": [
     {
       "title": "Menü",
       "linkList": [
-        { "link": "Was ist SOAR?", "href": "#information", "icon": "" },
-        { "link": "Aufgaben", "href": "#task", "icon": "" },
-        { "link": "Über Uns", "href": "#about", "icon": "" },
-        { "link": "Preise", "href": "#pricing", "icon": "" }
+        {
+          "link": "Was ist SOAR?",
+          "href": "#information",
+          "icon": ""
+        },
+        {
+          "link": "Aufgaben",
+          "href": "#task",
+          "icon": ""
+        },
+        {
+          "link": "Über Uns",
+          "href": "#about",
+          "icon": ""
+        },
+        {
+          "link": "Preise",
+          "href": "#pricing",
+          "icon": ""
+        }
       ]
     }
   ]

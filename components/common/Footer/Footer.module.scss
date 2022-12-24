@@ -1,8 +1,42 @@
+.contact {
+  position: relative;
+  background-color: #fff;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgb(#eaeaea, 40%),
+      rgb(#eaeaea, 90%),
+      rgb(#fff, 100%)
+    );
+  }
+
+  &::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 0, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0) 100%);
+    opacity: 0.05;
+    z-index: 1;
+  }
+}
+
 .footer {
   // background: url('/footer-bg.jpg');
   // background-position: bottom center;
   // background-repeat: no-repeat;
   // background-size: cover;
   // width: 100%;
-  background: #f4f5f7;
+  background: #fafafa;
+  border-top: 1px solid #eaeaea;
 }

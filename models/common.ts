@@ -8,6 +8,26 @@ export interface HeaderProps {
   href?: string;
 }
 
+export interface FooterProps {
+  contact: {
+    title: string;
+    contents: string;
+    href: string;
+    btnText: string;
+  };
+  image: string;
+  description: string;
+  license: string;
+  contents: {
+    title: string;
+    linkList: {
+      link: string;
+      href: string;
+      icon: string;
+    }[];
+  }[];
+}
+
 export interface TitleProps {
   subtitle?: string;
   title?: string;
