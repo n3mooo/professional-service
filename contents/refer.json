@@ -1,20 +1,20 @@
 {
-    "image": "/images/security-light.svg",
-    "contents": [
-        {
-            "name": "Cloud Firewall",
-            "desc": "Planung und Implementierung einer Cloud Firewall.",
-            "image": ""
-        },
-        {
-            "name": "Security Audit",
-            "desc": "Analyse und Bewertung der IT-Infrastuktur.",
-            "image": ""
-        },
-        {
-            "name": "Security Operations",
-            "desc": "Unterstützung beim Betrieb der Security Infrastruktur.",
-            "image": ""
-        }
-    ]
+  "image": "/images/security-light.svg",
+  "contents": [
+    {
+      "name": "Cloud Firewall",
+      "desc": "Planung und Implementierung einer Cloud Firewall.",
+      "image": "/icons/cloud.svg"
+    },
+    {
+      "name": "Security Audit",
+      "desc": "Analyse und Bewertung der IT-Infrastuktur.",
+      "image": "/icons/shield-check.svg"
+    },
+    {
+      "name": "Security Operations",
+      "desc": "Unterstützung beim Betrieb der Security Infrastruktur.",
+      "image": "/icons/cog-6-tooth.svg"
+    }
+  ]
 }

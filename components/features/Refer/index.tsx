@@ -1,12 +1,26 @@
 import { Wrapper } from '@/components/common';
-import security from '@/public/images/security-light.svg';
-import { CircleStackIcon } from '@heroicons/react/24/outline';
+import { ReferProps } from '@/models';
+import * as animationData from '@/public/images/cybersecurity.json';
 import clsx from 'clsx';
 import Image from 'next/image';
+import Lottie, { LottieProps } from 'react-lottie';
 import styles from './Refer.module.scss';
-import { ReferProps } from '@/models';
 
 export function Refer({ image, contents }: ReferProps) {
+  const defaultOptions: LottieProps = {
+    options: {
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice',
+      },
+    },
+    width: '100%',
+    height: '100%',
+    isClickToPauseDisabled: false,
+  };
+
   return (
     <Wrapper className="max-w-[1080px]">
       <div className={clsx(styles.referSection)}>
@@ -14,7 +28,7 @@ export function Refer({ image, contents }: ReferProps) {
           {contents.map((item, index) => (
             <div key={index} className={clsx(`mb-12`, styles.referCard)}>
               <div className={clsx(styles.referCardIcon)}>
-                <CircleStackIcon color="#007EF0" height={24} />
+                <Image src={item.image} alt="" height={0} width={0} className="h-6" />
               </div>
               <div>
                 <p className="text-black font-semibold text-xl leading-6 mb-2">{item.name}</p>
@@ -23,8 +37,16 @@ export function Refer({ image, contents }: ReferProps) {
             </div>
           ))}
         </main>
-        <div className="relative w-full lg:w-auto">
-          <Image src={image} alt="" width={0} height={0} className={'rounded'} />
+        <div className="relative w-full lg:w-auto isolate">
+          <Lottie {...defaultOptions} />
+
+          <Image
+            src={image}
+            alt=""
+            width={0}
+            height={0}
+            className={'absolute inset-0 rounded select-none'}
+          />
         </div>
       </div>
     </Wrapper>
