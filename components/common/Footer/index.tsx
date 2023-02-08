@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import { Wrapper, Title } from '@/components/common';
+import { Wrapper, Title, Button, ButtonVariant } from '@/components/common';
 import { FooterProps } from '@/models';
 
 export function Footer({ contact, image, contents, description, license }: FooterProps) {
@@ -14,12 +14,12 @@ export function Footer({ contact, image, contents, description, license }: Foote
             <div className="content font-normal text-base md:text-lg lg:text-xl text-[#666] lg:max-w-xl xl:max-w-2xl mx-auto text-center flex flex-col gap-4 mb-8">
               {contact.contents}
             </div>
-            <div className="relative btn-gradient max-w-fit mx-auto">
-              <span className="layer-gradient"></span>
-              <Link href={contact.href} className="btn">
-                {contact.btnText}
-              </Link>
-            </div>
+            <Button
+              btnText={contact.btnText}
+              url={contact.url || '/'}
+              variant={ButtonVariant.GRADIENT}
+              width={'max-w-fit mx-auto'}
+            />
           </div>
         </Wrapper>
       </div>
@@ -48,7 +48,7 @@ export function Footer({ contact, image, contents, description, license }: Foote
                     <li key={index}>
                       <Link
                         className="text-base font-normal text-[#00172e] hover:text-[#27a9e1] "
-                        href={item.href}
+                        href={item.url || '/'}
                       >
                         {item.link}
                       </Link>

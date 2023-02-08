@@ -6,8 +6,8 @@ export interface HeroProps {
   btnText: string;
   btnText2: string;
   image: string;
-  href: string;
-  href2: string;
+  url: string;
+  url2: string;
 }
 
 export interface PartnerProps {
@@ -37,7 +37,7 @@ export interface AboutProps {
   title: string;
   image: string;
   contents: [];
-  href: string;
+  url: string;
   btnText: string;
 }
 

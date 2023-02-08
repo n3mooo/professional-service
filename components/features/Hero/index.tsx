@@ -1,11 +1,11 @@
-import { Wrapper } from '@/components/common';
+import { Button, ButtonVariant, Wrapper } from '@/components/common';
 import { HeroProps } from '@/models';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hero.module.scss';
 
-export function Hero({ title, title2, content, btnText, btnText2, image, href, href2 }: HeroProps) {
+export function Hero({ title, title2, content, btnText, btnText2, image, url, url2 }: HeroProps) {
   return (
     <div>
       <div className={clsx('', styles.heroSection)}>
@@ -28,15 +28,16 @@ export function Hero({ title, title2, content, btnText, btnText2, image, href, h
               {content}
             </p>
             <div className="mb-12 md:mb-24 heroButton w-full sm:max-w-md mx-auto flex flex-wrap sm:flex-nowrap items-center justify-center gap-6">
-              <Link href={href} className="basis-full sm:basis-1/2 btn btn-dark-outline">
+              {/* <Link href={href} className="basis-full sm:basis-1/2 btn btn-dark-outline">
                 {btnText}
-              </Link>
-              <div className="relative basis-full sm:basis-1/2 btn-gradient">
-                <span className="layer-gradient"></span>
-                <Link href={href2} className="btn">
-                  {btnText2}
-                </Link>
-              </div>
+              </Link> */}
+              <Button btnText={btnText} url={url || '/'} variant={ButtonVariant.OUTLINED} />
+              <Button
+                btnText={btnText2}
+                url={url2 || '/'}
+                variant={ButtonVariant.GRADIENT}
+                width={'basis-full sm:basis-1/2'}
+              />
             </div>
           </div>
           <div className="relative">

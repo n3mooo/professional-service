@@ -22,33 +22,35 @@ export function Refer({ image, contents }: ReferProps) {
   };
 
   return (
-    <Wrapper className="max-w-[1080px]">
-      <div className={clsx(styles.referSection)}>
-        <main className="md:w-fit md:mx-auto w-full">
-          {contents.map((item, index) => (
-            <div key={index} className={clsx(`mb-12`, styles.referCard)}>
-              <div className={clsx(styles.referCardIcon)}>
-                <Image src={item.image} alt="" height={0} width={0} className="h-6" />
+    <div id="refer">
+      <Wrapper className="max-w-[1080px]">
+        <div className={clsx(styles.referSection)}>
+          <main className="md:w-fit md:mx-auto w-full">
+            {contents.map((item, index) => (
+              <div key={index} className={clsx(`mb-12`, styles.referCard)}>
+                <div className={clsx(styles.referCardIcon)}>
+                  <Image src={item.image} alt="" height={0} width={0} className="h-6" />
+                </div>
+                <div>
+                  <p className="text-black font-semibold text-xl leading-6 mb-2">{item.name}</p>
+                  <p className="text-[#666] text-sm font-normal leading-5">{item.desc}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-black font-semibold text-xl leading-6 mb-2">{item.name}</p>
-                <p className="text-[#666] text-sm font-normal leading-5">{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </main>
-        <div className="relative w-full lg:w-auto isolate">
-          <Lottie {...defaultOptions} />
+            ))}
+          </main>
+          <div className="relative w-full lg:w-auto isolate">
+            <Lottie {...defaultOptions} />
 
-          <Image
-            src={image}
-            alt=""
-            width={0}
-            height={0}
-            className={'absolute inset-0 rounded select-none'}
-          />
+            <Image
+              src={image}
+              alt=""
+              width={0}
+              height={0}
+              className={'absolute inset-0 rounded select-none'}
+            />
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </div>
   );
 }

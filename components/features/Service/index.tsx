@@ -26,7 +26,7 @@ export function Service({ heading, contents }: ServiceProps) {
     },
   };
   return (
-    <div className="overflow-hidden relative">
+    <div className="overflow-hidden relative" id="service">
       <Wrapper className="isolate">
         <Title
           subtitle={heading?.subtitle}

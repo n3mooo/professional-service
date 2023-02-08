@@ -37,7 +37,7 @@ export function Partner({ subtitle, content }: PartnerProps) {
   };
 
   return (
-    <div className="container mb-12 md:mb-24">
+    <div className="container mb-12 md:mb-24" id="partner">
       <Title subtitle={subtitle} textAlign="center" />
       <Splide aria-label="Logo banner" {...optionSplide}>
         {content.map((item, index) => (

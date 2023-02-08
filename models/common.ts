@@ -1,18 +1,21 @@
+export interface MenuProps {
+  name: string;
+  url: string;
+  activeId: string;
+}
+
 export interface HeaderProps {
-  menu?: {
-    name: string;
-    href: string;
-  }[];
-  logo?: string;
-  btnText?: string;
-  href?: string;
+  menu: MenuProps[];
+  logo: string;
+  btnText: string;
+  url: string;
 }
 
 export interface FooterProps {
   contact: {
     title: string;
     contents: string;
-    href: string;
+    url: string;
     btnText: string;
   };
   image: string;
@@ -22,7 +25,7 @@ export interface FooterProps {
     title: string;
     linkList: {
       link: string;
-      href: string;
+      url: string;
       icon: string;
     }[];
   }[];

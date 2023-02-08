@@ -6,6 +6,6 @@
   "btnText": "Erfahren Sie mehr…",
   "btnText2": "Explore more",
   "image": "/images/bg-services.png",
-  "href": "#contact",
-  "href2": "#partner"
+  "url": "#contact",
+  "url2": "#partner"
 }
